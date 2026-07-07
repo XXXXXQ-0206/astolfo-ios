@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Signing and provisioning
+*.mobileprovision
+*.cer
+*.p12
+*.key
+*.pem
+
+# App archives and packages
+*.ipa
+*.xcarchive
+*.dSYM
+
+# Runtime book databases and user state
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+Books.sqlite
+Books.sqlite.*
+ReaderState.sqlite
+ReaderState.sqlite.*
+BooksManifest.json
+
+# Runtime chunks and imported content
+*.txt
+*.zip
+*.rar
+*.7z
+*.epub
+*.mobi
+*.pdf
+Books.sqlite.part-*
+
+# Dependency folders generated outside this minimal iOS project
+node_modules/
