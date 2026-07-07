@@ -5050,7 +5050,7 @@ final class BookListViewController: UITableViewController, UISearchBarDelegate {
     private var titleText: String {
         switch kind {
         case .library:
-            return "书库"
+            return "Astolfo"
         case .recent:
             return "最近阅读"
         case .favorites:

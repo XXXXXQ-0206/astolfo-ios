@@ -1,15 +1,29 @@
-# iOS 本地阅读器
+# Astolfo
 
 [![English README](https://img.shields.io/badge/README-English-blue)](README.md)
 
-这是一个原生 iOS 本地文本书库阅读器，面向离线大规模文本集合。项目使用 SQLite/FTS5 做本地书库、目录和搜索，并将阅读状态保存在设备本地。
+**Astolfo** 是面向 Apple 平台的 local-first 文档智能应用，目标是逐步演进为强大的 Document RAG Agent 和 AI Knowledge Workspace。
 
-## 包含内容
+**ASTOLFO** 是 **Agent for Semantic Text Operations on Large Filebases & Ontologies** 的缩写。
+
+Astolfo 当前是一个原生 iOS 离线文本集合阅读器。项目使用 SQLite/FTS5 做本地目录和搜索，并将阅读状态保存在设备本地。
+
+## 项目定位
+
+- Local-first：文档和阅读状态以保存在本机为核心设计。
+- Privacy-first：公开版本不包含分析、跟踪、同步服务或内置文档内容。
+- Apple Native：当前应用是使用 Swift 和 UIKit 构建的原生 iOS 工程。
+- Semantic Retrieval：当前搜索层基于本地 SQLite/FTS5，为未来语义检索打基础。
+- Document Intelligence：项目围绕大型本地文档集合、元数据、搜索和阅读工作流组织。
+- AI Knowledge Workspace：未来能力会建立在本地文档库之上，而不是替换成本质上的云端优先流程。
+
+## 当前能力
 
 - 原生 iOS 源码。
 - UIKit/Swift 阅读界面。
 - 本地 SQLite 目录和全文搜索逻辑。
 - 收藏、最近阅读、最近删除和阅读状态持久化逻辑。
+- 本地标签和简介元数据解析。
 - 可用 Xcode 打开的工程结构。
 
 ## 不包含内容
@@ -57,11 +71,27 @@ app 运行时有兜底解析：会在正文前 1,200 个字符和前 8 行内寻
 2. 设置你自己的 bundle identifier 和签名团队。
 3. 在 iOS 设备或模拟器上构建运行。
 
-默认 bundle identifier 是占位值：`com.example.localreader`。
+默认 bundle identifier 是占位值：`com.example.astolfo`。
+
+## Vision and Roadmap
+
+Astolfo 的长期方向是从本地文本阅读器演进为 local-first 文档智能工作空间。
+
+规划方向包括：
+
+- 面向本地文件库的 Document RAG。
+- Agent 辅助阅读、检索和标注工作流。
+- 语义分块和 embedding 索引。
+- 知识图谱和 ontology-aware 文档组织。
+- MCP 兼容集成。
+- 通过用户自定义 provider 实现多模型支持。
+- 在保护隐私的前提下扩展 Apple 原生跨设备工作流。
+
+除非源码中已经明确实现，上述路线图内容均属于未来规划，不代表当前版本已具备这些能力。
 
 ## 隐私
 
-本应用面向本地阅读，不包含分析、跟踪、网络同步、云端上传或任何内置阅读内容。
+Astolfo 当前公开版本面向本地阅读，不包含分析、跟踪、网络同步、云端上传或任何内置阅读内容。
 
 ## 仓库卫生
 

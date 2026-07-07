@@ -1,18 +1,32 @@
-# Local Reader for iOS
+# Astolfo
 
 [![中文 README](https://img.shields.io/badge/README-中文-blue)](README.zh-CN.md)
 
-Local Reader is a native iOS text-library reader focused on large offline text collections. It uses SQLite/FTS5 for local catalog storage and search, and keeps reading state on device.
+**Astolfo** is a local-first document intelligence application for Apple platforms, designed to evolve into a powerful Document RAG Agent and AI Knowledge Workspace.
 
-## What Is Included
+**ASTOLFO** stands for **Agent for Semantic Text Operations on Large Filebases & Ontologies**.
+
+Astolfo is currently a native iOS reader for large offline text collections. It uses SQLite/FTS5 for local catalog storage and search, and keeps reading state on device.
+
+## Positioning
+
+- Local-first: documents and reading state are designed to stay on device.
+- Privacy-first: this public release includes no analytics, tracking, sync service, or bundled document content.
+- Apple Native: the current app is a native iOS project built with Swift and UIKit.
+- Semantic Retrieval: the current search layer uses local SQLite/FTS5 primitives as the foundation for future semantic retrieval.
+- Document Intelligence: the project is structured around large local document collections, metadata, search, and reading workflows.
+- AI Knowledge Workspace: future work is expected to build on the local document base rather than replace it with a cloud-first workflow.
+
+## Current Capabilities
 
 - Native iOS source code.
 - UIKit/Swift reader UI.
-- Local SQLite catalog/search integration.
+- Local SQLite catalog and full-text search integration.
 - Favorites, recent reading, deleted items, and reading-state persistence logic.
+- Local tag and summary metadata parsing.
 - Buildable Xcode project structure.
 
-## What Is Not Included
+## Not Included
 
 This public repository intentionally does not include:
 
@@ -57,11 +71,27 @@ The app runtime has a fallback parser that scans the first 1,200 characters and 
 2. Set your own bundle identifier and signing team.
 3. Build and run on an iOS device or simulator.
 
-The default bundle identifier is a placeholder: `com.example.localreader`.
+The default bundle identifier is a placeholder: `com.example.astolfo`.
+
+## Vision and Roadmap
+
+Astolfo is intended to evolve from a local text reader into a local-first document intelligence workspace.
+
+Planned directions include:
+
+- Document RAG over local filebases.
+- Agent-assisted reading, retrieval, and annotation workflows.
+- Semantic chunking and embedding indexes.
+- Knowledge graph and ontology-aware organization.
+- MCP-compatible integrations.
+- Multi-model support through user-configured providers.
+- Cross-device Apple-native workflows where privacy can be preserved.
+
+These roadmap items are not part of the current implementation unless explicitly present in the source code.
 
 ## Privacy
 
-The app is designed for local-only reading. It does not include analytics, tracking, network sync, cloud upload, or any bundled reading content in this public release.
+Astolfo is designed for local-only reading in this public release. It does not include analytics, tracking, network sync, cloud upload, or any bundled reading content.
 
 ## Repository Hygiene
 
